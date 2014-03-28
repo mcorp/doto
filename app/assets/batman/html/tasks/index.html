@@ -1,0 +1,9 @@
+<h1>Tasks</h1>
+
+<ul>
+  <li data-foreach-task="tasks">
+    <a data-bind="task.title" data-route="task"></a>
+    <a data-route="routes.tasks[task].edit">+</a>
+    <a data-event-click="destroy">x</a>
+  </li>
+</ul>
