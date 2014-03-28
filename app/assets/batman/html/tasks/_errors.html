@@ -1,0 +1,9 @@
+<div data-showif="task.errors.length">
+  <p>
+    <span data-bind="'error' | pluralize task.errors.length"></span>
+    prevented this task from being created:
+  </p>
+  <ul>
+    <li data-bind="error.message" data-foreach-error="task.errors"></li>
+  </ul>
+</div>
