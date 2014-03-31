@@ -44,10 +44,13 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# Tests
 group :development, :test do
+  # Tests
   gem 'rspec-rails', '~> 3.0.0.beta2'
   gem 'shoulda'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
+
+  # Debugger
+  gem 'pry-nav'
 end
