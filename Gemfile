@@ -48,4 +48,6 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta2'
   gem 'shoulda'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
 end
