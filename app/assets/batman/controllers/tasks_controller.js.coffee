@@ -1,12 +1,10 @@
 class Todo.TasksController extends Todo.ApplicationController
   routingKey: 'tasks'
 
-  @beforeAction 'fetchTask', only: ['show', 'edit']
+  @beforeAction 'fetchTask', only: ['edit']
 
   index: (params) ->
     @set('tasks', Todo.Task.get('all'))
-
-  show: (params) ->
 
   edit: (params) ->
 
@@ -18,14 +16,14 @@ class Todo.TasksController extends Todo.ApplicationController
       if err
         throw err unless err instanceof Batman.ErrorsSet
       else
-        @redirect task
+        @redirect '/tasks'
 
   update: (params) ->
     @task.save (err, task) =>
       if err
         throw err unless err instanceof Batman.ErrorsSet
       else
-        @redirect task
+        @redirect '/tasks'
 
   destroy: (node, event, context) ->
     task = if context.get('task') then context.get('task') else @task
