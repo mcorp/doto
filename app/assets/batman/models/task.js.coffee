@@ -7,6 +7,5 @@ class Todo.Task extends Batman.Model
   @validate "title",   presence: true
 
   # Use @encode to tell batman.js which properties Rails will send back with its JSON.
-  @encode 'title'
+  @encode 'title', 'completed'
   @encodeTimestamps()
-
