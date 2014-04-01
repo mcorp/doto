@@ -2,7 +2,8 @@
 
 <ul>
   <li data-foreach-task="tasks">
+    <input type="checkbox" data-bind-checked="task.completed" data-event-change="toggle"></input>
     <a data-bind="task.title" data-route="routes.tasks[task].edit"></a>
-    <a data-event-click="destroy">x</a>
+    <a data-event-click="destroy" class="destroy">x</a>
   </li>
 </ul>

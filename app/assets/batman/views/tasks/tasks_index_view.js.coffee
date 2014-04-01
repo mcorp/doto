@@ -5,3 +5,7 @@ class Todo.TasksIndexView extends Batman.View
   # buttonWasClicked: (node, event, view) ->
     # You can put all of your event handlers in this view file. You can access
     # data by using `view.lookupKeypath('someData')` or `@controller`.
+
+  toggle: (node, event, view) ->
+    task = view.get('task')
+    task.save({ "completed": !!task.get('completed') })
