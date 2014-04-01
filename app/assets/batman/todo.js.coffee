@@ -33,6 +33,6 @@ class Todo extends Batman.App
   # @route 'apps', 'apps#index'
   # @route 'apps/private', 'apps#private', as: 'privateApps'
 
-  @root 'main#index'
+  @root 'tasks#index'
 
 (global ? window).Todo = Todo
