@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   # You likely have this before callback set up for the token.
   before_save :ensure_authentication_token
 
+  ## associations
+  has_many :tasks, dependent: :destroy
+
   def ensure_authentication_token
     if authentication_token.blank?
       self.authentication_token = generate_authentication_token
