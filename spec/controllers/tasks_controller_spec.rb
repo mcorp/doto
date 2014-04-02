@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe TasksController do
+  login_user
+
   it 'GET #index' do
     task = create(:task)
     get :index, format: :json
