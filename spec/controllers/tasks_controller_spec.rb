@@ -4,13 +4,13 @@ describe TasksController do
   login_user
 
   it 'GET #index' do
-    task = create(:task)
+    task = create(:task, user: @user)
     get :index, format: :json
     expect(response.body).to eq([task].to_json)
   end
 
   it 'GET #show' do
-    task = create(:task)
+    task = create(:task, user: @user)
 
     get :show, id: task, format: :json
     expect(response.body).to eq(task.to_json)
@@ -35,7 +35,7 @@ describe TasksController do
   end
 
   describe 'PUT #update' do
-    before(:each) { @task = create(:task) }
+    before(:each) { @task = create(:task, user: @user) }
 
     context 'valid attributes' do
       it 'changes @task attributes' do
@@ -55,7 +55,7 @@ describe TasksController do
   end
 
   it 'DELETE' do
-    task = create(:task)
+    task = create(:task, user: @user)
 
     expect { delete :destroy, id: task, format: :json }.to change(Task, :count).by(-1)
   end

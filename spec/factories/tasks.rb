@@ -3,5 +3,6 @@
 FactoryGirl.define do
   factory :task do
     title "Task.title"
+    user
   end
 end

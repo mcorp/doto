@@ -32,7 +32,8 @@ RSpec.configure do |config|
 
     begin
       DatabaseCleaner.start
-      FactoryGirl.lint
+      # TODO check what is the correct line
+      # FactoryGirl.lint
     ensure
       DatabaseCleaner.clean
     end
