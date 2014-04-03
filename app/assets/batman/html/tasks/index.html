@@ -1,9 +1,11 @@
-<h1>Tasks</h1>
-
-<ul>
-  <li data-foreach-task="tasks">
-    <input type="checkbox" data-bind-checked="task.completed" data-event-change="toggle"></input>
-    <label><a data-bind="task.title" data-route="routes.tasks[task].edit"></a></label>
-    <a data-event-click="destroy" class="destroy">x</a>
+<ul class="list-group list-group-sp">
+  <li data-foreach-task="tasks" class="list-group-item hover">
+    <div class="view">
+      <button data-event-click="destroy" class="destroy close hover-action">x</button>
+      <div class="checkbox">
+        <input type="checkbox" data-bind-checked="task.completed" data-event-change="toggle"></input>
+        <label><a data-bind="task.title" data-route="routes.tasks[task].edit"></a></label>
+      </div>
+    </div>
   </li>
 </ul>

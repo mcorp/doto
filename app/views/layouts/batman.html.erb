@@ -9,14 +9,33 @@
 </head>
 <body>
 
-<a data-route="routes.tasks">Tasks</a> |
-<a data-route="routes.tasks.new">New Task</a>
+  <div class="container">
+    <header>
+      <ul class="nav nav-pills pull-right">
+        <li>
+          <a class="btn btn-primary btn-sm pull-right btn-icon" data-route="routes.tasks.new">+</a>
+        </li>
+      </ul>
+      <h1 class="text-muted">
+        <a data-route="routes.tasks">Tasks</a>
+      </h1>
+    </header>
 
-<div data-yield="main"></div>
+    <section class="bg-light lter w-f">
+      <aside>
+        <section class="vbox">
+          <section class="scrollable wrapper">
+            <div data-yield="main"></div>
+          </section>
+        </section>
+      </aside>
+    </section>
 
-<script type="text/javascript">
-  Todo.run();
-</script>
+  </div> <!-- /container -->
+
+  <script type="text/javascript">
+    Todo.run();
+  </script>
 
 </body>
 </html>
