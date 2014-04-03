@@ -1,6 +1,22 @@
-<div>
-  <label>Title: <input data-bind="task.title" /></label><br />
-  <label>Completed? <input type="checkbox" data-bind="task.completed" /></label>
+<div class="form-group">
+  <label for="task_title" class="col-sm-1 control-label">Title</label>
+  <div class="col-sm-10">
+    <input id="task_title" placeholder="Title" class="form-control" data-bind="task.title" />
+  </div>
 </div>
 
-<input type="submit" name="Submit" value="Submit" />
+<div class="form-group">
+  <div class="col-sm-offset-1 col-sm-11">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" data-bind="task.completed" /> completed?
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-offset-1 col-sm-11">
+    <button type="submit" class="btn btn-default">Save</button>
+  </div>
+</div>
