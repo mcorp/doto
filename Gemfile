@@ -57,4 +57,10 @@ group :development, :test do
 
   # Debugger
   gem 'pry-nav'
+
+  # Deploy
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-deploy-recipes', github: 'mcorp/capistrano-deploy-recipes'
 end
