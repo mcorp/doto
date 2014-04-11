@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/mcorp/capistrano-deploy-recipes.git
-  revision: cfc83667b4d620e4151f7432b93050e219034f14
+  revision: 9c3c51a3165744eeec4b23a77dd6c96810a0c0d8
   specs:
     capistrano-deploy-recipes (0.1.6.rc)
       capistrano (~> 3.1)
@@ -89,7 +89,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.9.2)
-    net-scp (1.1.2)
+    net-scp (1.2.0)
       net-ssh (>= 2.6.5)
     net-ssh (2.8.0)
     orm_adapter (0.5.0)
