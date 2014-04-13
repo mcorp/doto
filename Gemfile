@@ -63,4 +63,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano-deploy-recipes', github: 'mcorp/capistrano-deploy-recipes'
+
+  # App server
+  gem 'unicorn'
 end
