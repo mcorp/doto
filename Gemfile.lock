@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/mcorp/capistrano-deploy-recipes.git
-  revision: 11de8d364cbf9026fc896e7ba314254161e1ab04
+  revision: 6a06532f3082195eddda80ad4529d11564d37394
   specs:
     capistrano-deploy-recipes (0.1.6.rc)
       capistrano (~> 3.1)
