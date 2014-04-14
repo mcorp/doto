@@ -34,4 +34,6 @@ Todo::Application.routes.draw do
   end
 
   resources :tasks, only: [:index, :show, :destroy, :create, :update]
+
+  root to: 'home#index'
 end
