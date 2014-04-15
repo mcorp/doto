@@ -1,18 +1,20 @@
 <div id="todoapp">
   <header>
-    <h1>Todos</h1>
-    <input id="new-todo" type="text" placeholder="What needs to be completed?">
+    <h1>Your todo</h1>
+    <input id="new-task" type="text" placeholder="What do you need to do?">
   </header>
 
   <section id="main">
-    <input id="toggle-all" type="checkbox">
+    <input id="toggle-all" type="checkbox" />
     <label for="toggle-all">Mark all as complete</label>
-    <ul id="todo-list"></ul>
+
+    <ul id="task-list">
+    </ul>
   </section>
 
   <footer>
     <a id="clear-completed">Clear completed</a>
-    <div id="todo-count"></div>
+    <div id="task-count"></div>
   </footer>
 </div>
 
@@ -20,7 +22,7 @@
   <div class="view">
     <input class="toggle" type="checkbox" <%%= completed ? 'checked="checked"' : '' %> />
     <label><%%- title %></label>
-    <a class="destroy"></a>
+    <a class="destroy">x</a>
   </div>
   <input class="edit" type="text" value="<%%- title %>" />
 </script>
@@ -29,5 +31,5 @@
   <%% if (completed) { %>
     <a id="clear-completed">Clear <%%= completed %> completed <%%= completed == 1 ? 'item' : 'items' %></a>
   <%% } %>
-  <div class="todo-count"><b><%%= remaining %></b> <%%= remaining == 1 ? 'item' : 'items' %> left</div>
+  <div class="task-count"><b><%%= remaining %></b> <%%= remaining == 1 ? 'item' : 'items' %> left</div>
 </script>
